@@ -1,0 +1,80 @@
+<div class ="head"> 
+  <h1 class="header">   
+    <i class="fa-solid fa-code"></i>
+    E x p r e s s i o n </h1>
+</div>
+
+<div class="container">
+  <div class="simulate-button-container">
+    <ng-container *ngIf="!showTestButtons; else testButtons">
+      <button (click)="showTestColumn = true; simulate(); showTestButtons = true;" class="simulate-button">S i m u l a t e</button>
+    </ng-container>
+    <ng-template #testButtons>
+      <button (click)="test()" class="simulate-button">T e s t</button>
+      <button (click)="cancel()" class="simulate-button">C a n c e l</button>
+    </ng-template>
+  </div>
+  <div class="label-with-line">
+    <label for="textInput" class="input-label">F i e l d s</label>
+    <div class="horizontal-line"></div>
+  </div>  
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Action</th>
+        <th *ngIf="showTestColumn">Test Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let variable of variables" class="table-row">
+        <td>{{ variable.name }}</td>
+        <td>{{ variable.type }}</td>
+        <td>
+          <button (click)="addToExpression(variable.name)" class="add-button">+ Add to Expression</button>
+        </td>
+        <td *ngIf="showTestColumn">
+          <input [(ngModel)]="variable.testValue" class="test-value-input" [placeholder]="variable.type === 'string' ? 'Enter a string' : 'Enter a number'">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div class="textarea-container">
+    <div class="label-with-line">
+      <label for="textInput" class="input-label">B e s o i n</label>
+      <div class="horizontal-line"></div>
+    </div>
+        <textarea id="textInput"
+      class="textarea"
+      maxlength="13000"
+      [(ngModel)]="inputText"
+      (input)="updateCharacterCount()"
+    ></textarea>
+    <div class="character-count" [ngClass]="{ 'limit-exceeded': isLimitExceeded }">
+      {{ characterCount }} / 13000 characters
+    </div>
+    <button (click)="generateCode()" class="generate-code-button">Generate Code</button>
+  </div>
+  
+  
+  <div *ngIf="generatedCode !== ''">
+    <div class="label-with-line">
+      <label for="generatedCode" class="input-label">G e n e r a t e d  C o d e</label>
+      <div class="horizontal-line"></div>
+    </div>
+    <textarea id="generatedCode" [(ngModel)]="generatedCode" class="input-textarea"></textarea>
+  </div>
+  
+
+  
+  <div *ngIf="result !== ''" class="result-section">
+    <div class="label-with-line">
+    <strong class="result-label" class="input-label">R e s u l t</strong>
+    <div class="horizontal-line"></div>
+    </div>
+    <div class="result-value">{{ result }}</div>
+  </div>
+</div>

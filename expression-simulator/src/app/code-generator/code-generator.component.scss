@@ -1,0 +1,239 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+
+.head {
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color:#546072;
+}
+
+.fa-code {
+  font-size: 25px; 
+  margin-right: 25px; 
+  margin-left: 10%;
+}
+
+.container {
+    background: linear-gradient(to bottom, #f0f0f0, #4a919e51);
+    max-width: 75%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 4px;
+    
+
+    .simulate-button {
+      background-color: #EBACA2; 
+      color: rgb(243, 244, 243);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      font-size: 15px;
+      &:hover {
+        background-color: #CE6A6B; 
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+      }
+    }
+    
+    .header {
+      margin : 0;
+      margin-bottom: 30px;
+      color:#4A919E;
+      display: flex;
+
+    }
+  
+    .input-section {
+      margin-bottom: 15px;
+    }
+  
+    .input-label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: hwb(189 29% 38%);
+      font-size: 25px;
+    }
+.test-value-input {
+  font-size: 20px;
+} 
+  
+    .button-section {
+      text-align: center;
+      margin-top: 15px;
+  
+      .simulate-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+  
+    .result-section {
+      margin-top: 20px;
+  
+      .result-label {
+        font-weight: bold;
+        display: block;
+      }
+  
+      .result-value {
+        margin-top: 5px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f5f5f5;
+      }
+    }
+  }
+
+  table {
+  width: 93%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
+    font-weight: bold;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+.input-container {
+  margin-bottom: 20px; 
+}
+
+
+/*  labels  */
+.label-with-line {
+  display: flex;
+  align-items: center;
+}
+.input-label {
+  margin-top: 20px;
+  margin-right: 10px; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.horizontal-line {
+  flex-grow: 1;
+  border-top: 3px solid #4a919e51;
+  margin-top: 20px;
+}
+
+
+.input-textarea {
+  width: 80%;
+  height: 200px;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical; 
+  margin-left: 50px;
+}
+.simulate-button-container {
+  text-align: right; 
+  margin-left : 80%; 
+}
+
+.generate-code-button {
+  background-color: #3ab6c4; 
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin : auto;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+
+
+/* textarea with controlled number of characters */
+.textarea-container {
+  position: relative;
+}
+.textarea {
+  width: 93%;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin : auto;
+  margin-top : 20px;
+}
+.character-count {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 12px;
+  color: #888;
+}
+.limit-exceeded {
+  color: red;
+}
