@@ -4,7 +4,7 @@ import FormData from 'form-data';
 import fetch from 'node-fetch';
 import cors from 'cors'; 
 
-const apiKey = 'xxx';
+const apiKey = '99b5391d-f050-42e9-b102-be82ddc8606b';
 const apiUrl = 'https://api.codepal.ai/v1/code-generator/query';
 const app = express();
 const port = process.env.PORT || 3000;

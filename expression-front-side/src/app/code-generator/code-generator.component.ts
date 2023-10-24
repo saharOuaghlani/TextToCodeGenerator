@@ -18,10 +18,10 @@ export class CodeGeneratorComponent {
 
 
   variables = [
-    { name: 'variable1', type: 'string', testValue: '' },
-    { name: 'variable2', type: 'number', testValue: '' },
-    { name: 'variable3', type: 'string', testValue: '' },
-    { name: 'variable4', type: 'number', testValue: '' },
+    { name: 'Order_ext', type: 'string', testValue: '' },
+    { name: 'Order_Ref', type: 'string', testValue: '' },
+    { name: 'Order_Desc', type: 'string', testValue: '' },
+    { name: 'Order_Qte', type: 'number', testValue: '' },
 
   ];
 
